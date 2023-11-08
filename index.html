@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sortear(60, 6)">
+        Palpite Mega Sena
+    </button>
+
+    <button onclick="sortear(100, 25)">
+        Palpite Lotomania
+    </button>
+
+    <div id="mostrarResultado">
+        </p> 
+    </div>
+
+</body>
+<script>
+    function sortear(totalNumeros, quantidade) {
+        var paragrafo =document.getElementById("mostrarResultado");
+       paragrafo.innerHTML = " ";
+       var cont = 1;
+        // com o for laço de repetição só precisamos uma variavel so
+       // for(cont = 1 ; cont <= quantidade ; cont++){
+        while(cont <= quantidade){
+        var numeroSorteado = Math.ceil(Math.random() * totalNumeros);
+            paragrafo.innerHTML += " " + numeroSorteado;
+            cont++;
+        }
+       // var n1 = Math.ceil(Math.random() * totalNumeros);
+        //alert(numeroSorteado);
+       // document.getElementById("mostrarResultado").innerHTML += " " + numeroSorteado;
+        
+       // document.getElementById("mostrarResultado").innerHTML = numeroSorteado;
+       //document.getElementById("mostrarResultado").innerHTML = n1 + ", " + n2 + ", " + n3 + ", " + n4 + ", " + n5 + ", " + n6;
+       
+        //document.querySelector("#mostarResultado").innerHTML = numeroSorteado;
+        //alert(numeroSorteado);
+    }
+</script>
+
+</html>
